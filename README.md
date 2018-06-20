@@ -1,1 +1,1 @@
-# OpenStarsBox
+# OpenStarsServer
