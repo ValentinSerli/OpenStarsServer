@@ -48,7 +48,6 @@ public class RequeteObservationControler {
     {
         Coordonnees coord = coordonneeRepo.findOne(id);
         Image imagePlanete = imageRepo.findFirstByNomPlanete(coord.getNomPlanete());
-//        coord.setUrl(imagePlanete.getChemin());
         coord.setEtat(Etat.TRAITEE);
 
         coordonneeRepo.save(coord);
@@ -61,7 +60,6 @@ public class RequeteObservationControler {
     {
         Coordonnees coord = coordonneeRepo.findOne(id);
         Image imagePlanete = imageRepo.findFirstByNomPlanete(coord.getNomPlanete());
-//        coord.setUrl(imagePlanete.getChemin());
         coord.setEtat(Etat.ACCEPTEE);
 
         coordonneeRepo.save(coord);

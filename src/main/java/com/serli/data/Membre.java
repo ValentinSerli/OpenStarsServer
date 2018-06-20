@@ -28,11 +28,9 @@ public class Membre {
     private String password;
 
     @OneToMany(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "Id_membre", table = "rasp_user", referencedColumnName = "rasp_id_membre")
     @JoinTable(name="rasp_user",
             joinColumns = @JoinColumn(name="rasp_id_membre"),
             inverseJoinColumns = @JoinColumn(name = "Id_Rasp"))
-//    @JoinColumn(name="Id_membre", referencedColumnName="rasp_id_membre")
     private List<Rasp> rasps;
 
     @Column(name = "Pays")

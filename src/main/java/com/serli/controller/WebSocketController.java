@@ -8,8 +8,6 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 
-import java.util.Base64;
-
 @Controller
 public class WebSocketController {
 
@@ -35,7 +33,6 @@ public class WebSocketController {
     @SendTo("/telescope/picture")
     public Coordonnees onAskPictures(String message)
     {
-//        this.template.convertAndSend("/telescope", message);
         Coordonnees planete = coordonneeRepo.findByNomPlanete(message);
         return planete;
     }
@@ -44,9 +41,7 @@ public class WebSocketController {
     @SendTo("/telescope/receive")
     public Integer onReceivePicture(Object image)
     {
-//        this.template.convertAndSend("/telescope/receive", image);
         Integer s = new Integer(((byte[]) image)[0]);
         return s;
-//        return new String("test");
     }
 }
