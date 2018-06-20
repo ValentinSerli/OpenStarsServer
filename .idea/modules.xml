@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../open-stars-web/open-stars-web.iml" filepath="$PROJECT_DIR$/../open-stars-web/open-stars-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/telescope.iml" filepath="$PROJECT_DIR$/telescope.iml" />
+    </modules>
+  </component>
+</project>
